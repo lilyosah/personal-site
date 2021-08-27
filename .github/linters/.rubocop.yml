@@ -1,0 +1,21 @@
+AllCops:
+  NewCops: disable
+  Exclude:
+    - 'spec/**/*'
+  DisabledByDefault: true
+Style:
+  Enabled: true
+Style/ClassVars:
+  Enabled: false
+Layout:
+  Enabled: true
+Lint:
+  Enabled: true
+Metrics:
+  Enabled: false
+Naming:
+  Enabled: true
+Security:
+  Enabled: true
+Bundler:
+  Enabled: true
