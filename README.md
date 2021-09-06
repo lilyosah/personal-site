@@ -22,7 +22,11 @@ Overall, your goal is to make a page that you'd be proud to show others, with so
 
  * How long did you spend on this homework?
 
+An extremely long time but it was self-imposed. I wanted a site I can actually use and that I'm proud of. Probably >20 hours
+
  * What did you think about it?  What was good?  What could be improved?
+
+ I loved it. I'm glad I made something that I can actually use. I also learned a lot and enjoyed it.
 
 ## Grade and feedback
 

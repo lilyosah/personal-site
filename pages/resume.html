@@ -19,20 +19,18 @@
 					<img src="../src/graphics/icons/d_home.svg" alt="Home icon" />
 				</a>
 				<a href="./resume.html">résumé</a>
-				<a href="./projects.html">projects</a>
+				<!-- <a href="./projects.html">projects</a> -->
 			</nav>
 			<header>
 				<div id="gradient-container">
 					<div id="zebra-gradient"></div>
-					<svg viewBox="0 0 100 300">
+					<svg viewBox="0 0 100 100">
 						<defs>
 							<mask id="tr-bl-zebra-mask">
 								<rect
 									id="resume-stripe-mask"
 									x="0"
 									y="0"
-									width="30"
-									height="100"
 								></rect>
 							</mask>
 						</defs>
@@ -41,10 +39,15 @@
 				<h1>Lily Davisson Résumé</h1>
 				<h2>lilydavisson@gmail.com ● 512.297.3972</h2>
 			</header>
-			<img src="download-resume" alt="Button to download résumé as a PDF" />
+			<div>
+				<button class="jiggle" id="resume-download">
+					<a title="Download résumé as PDF" href="Lily_Davisson_Resume_2021-2022.pdf" download>
+						<img src="../src/graphics/icons/download.svg" alt="Button to download résumé as a PDF" />
+					</a>
+				</button>
+			</div>
 			<section class="box">
 				<div class="title-container">
-					<img alt="An icon of a graduation cap" src="../src/graphics/icons/mortarboard.svg"></svg>
 					<h2>education</h2>
 				</div>
 				<div class="box-content">
@@ -57,11 +60,12 @@
 					</div>
 
 					<table>
-						<th>degree</th>
-						<th>major</th>
-						<th>minor</th>
-						<th>GPA</th>
-						<th>major GPA</th>
+						<caption>Academic information</caption>
+						<th scope="col">degree</th>
+						<th scope="col">major</th>
+						<th scope="col">minor</th>
+						<th scope="col">GPA</th>
+						<th scope="col">major GPA</th>
 						<tr>
 							<td>Bachelor of Arts</td>
 							<td>Computer Science</td>
@@ -117,6 +121,7 @@
 							<p>Natural Language Processing</p>
 						</li>
 					</ul>
+					<br />
 					<div class="subtitle">
 						<div>
 							<h3>David Crockett High School</h3>
@@ -134,51 +139,212 @@
 			</section>
 			<section class="box">
 				<div class="title-container">
-					<img alt="An icon of a puzzle" src="../src/graphics/icons/mat.svg"></svg>
 					<h2>skills</h2>
 				</div>
 				<div class="box-content">
+					<div class="subtitle">
+						<div>
+							<h3>Strong</h3>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<p>Python</p>
+						</li>
+						<li>
+							<p>Java</p>
+						</li>
+						<li>
+							<p>Git</p>
+						</li>
+						<li>
+							<p>VSCode</p>
+						</li>
+						<li>
+							<p>OOP</p>
+						</li>
+						<li>
+							<p>JSON</p>
+						</li>
+					</ul>
+					<div class="subtitle">
+						<div>
+							<h3>Experienced</h3>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<p>C</p>
+						</li>
+						<li>
+							<p>HTML</p>
+						</li>
+						<li>
+							<p>CSS</p>
+						</li>
+						<li>
+							<p>JavaScript</p>
+						</li>
+						<li>
+							<p>REST APIs</p>
+						</li>
+						<li>
+							<p>NumPy</p>
+						</li>
+						<li>
+							<p>Pandas</p>
+						</li>
+						<li>
+							<p>Matplotlib</p>
+						</li>
+						<li>
+							<p>Jira</p>
+						</li>
+						<li>
+							<p>Agile</p>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section class="box">
 				<div class="title-container">
-					<img alt="An icon of a globe" src="../src/graphics/icons/world.svg"></svg>
 					<h2>internship and research experience</h2>
 				</div>
 				<div class="box-content">
-					<p>This is some high-level info about me and my qualifications.</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.
-					</p>
+					<div class="subtitle">
+						<div>
+							<h3>Intuit</h3>
+							<p class="secondary-subtitle">Mountain View, California (remote)</p>
+						</div>
+						<p class="date">May - August 2021</p>
+					</div>
+					<p class="position">Software Engineering Intern in Goto Market and Experimentation</p>
+					<ul>
+						<li>
+							<p>
+								Coordinated planning of a migration of 96% of feature flags from a third-party vendor to Intuit’s internal 
+								experimentation platform to encourage the usage of feature flags and industry-standard code hygiene
+							</p>
+						</li>
+						<li>
+							<p>
+								Developed a Python-based script to seamlessly and independently migrate flags, utilizing both platforms’ 
+								REST APIs, allowing for the immediate migration of 70% of flags 
+							</p>
+						</li>
+						<li>
+							<p>
+								Researched codebases and documentation to map cross-platform logic and capabilities and programmed a 
+								Java-based script to gather and process data about the state flags hosted in third-party vendor using their 
+								REST API
+							</p>
+						</li>
+					</ul>
+					<br />
+					<div class="subtitle">
+						<div>
+							<h3>Pacific Investment Management Company (PIMCO)</h3>
+							<p class="secondary-subtitle">Austin, Texas (remote)</p>
+						</div>
+						<p class="date">June - August 2020</p>
+					</div>
+					<p class="position">Technology Analyst Intern in Investment Data</p>
+					<ul>
+						<li>
+							<p>
+								Launched a visual and automated futures database on Confluence to increase ease of access and 
+								visibility of futures data to allow for faster and more informed trading
+							</p>
+						</li>
+						<li>
+							<p>
+								Retrieved and processed futures research and market data using Python investment database APIs and 
+								Pandas
+							</p>
+						</li>
+						<li>
+							<p>
+								Generated HTML pages to represent this data graphically using Jinja 2 templates, built these pages to 
+								Confluence using Confluence REST APIs, and scheduled this process to run daily using AutoSys 
+							</p>
+						</li>
+					</ul>
+					<br />
+					<div class="subtitle">
+						<div>
+							<h3>Colgate University Computer Science Research Department</h3>
+							<p class="secondary-subtitle">Hamilton, New York</p>
+						</div>
+						<p class="date">June - August 2019</p>
+					</div>
+					<p class="position">Internet Constancy Researcher</p>
+					<ul>
+						<li>
+							<p>
+								Coded Python script that automates retrieval of internet latency measurements and analyzed and visualized 
+								mathematical and operational constancy of data using Pandas and Matplotlib 
+							</p>
+						</li>
+						<li>
+							<p>
+								Summarized findings in poster that was accepted and presented at Internet Measurement Conference 2019 
+								and Internet Traffic Measurements and Analysis 2021
+							</p>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section class="box">
 				<div class="title-container">
-					<img alt="An icon of two hands shaking" src="../src/graphics/icons/handshake.svg"></svg>
 					<h2>campus leadership and involvement</h2>
 				</div>
 				<div class="box-content">
+					<div class="subtitle">
+						<div>
+							<h3>Computer Science Department</h3>
+						</div>
+						<p class="date">Fall 2019 - Present</p>
+					</div>
+					<p class="position">Teaching Assistant</p>
+					<p class="position">Peer-Led Tutoring Group Leader</p>
+					<div class="subtitle">
+						<div>
+							<h3>Case-Geyer Library Circulation Desk</h3>
+						</div>
+						<p class="date">Fall 2018 - Spring 2020</p>
+					</div>
+					<p class="position">Circulation Desk Worker</p>
+					<div class="subtitle">
+						<div>
+							<h3>Utica Refugee Tutor</h3>
+						</div>
+						<p class="date">Fall 2018 - Fall 2019</p>
+					</div>
+					<p class="position">Tutor</p>
 				</div>
 			</section>
-			<footer>
-				<div>
-					Icons made by
-					<a href="https://www.flaticon.com/authors/freepik" title="Freepik"
-						>Freepik</a
-					>
-					from
-					<a href="https://www.flaticon.com/" title="Flaticon"
-						>www.flaticon.com</a
-					>
-				</div>
-	
-			</footer>
 		</div>
+		<footer>
+			<div id="contact">
+				<h4>Contact</h4>
+				<p>Lily Davisson</p>
+				<p>lilydavisson@gmail.com</p>
+			</div>
+			<div>
+				<h4>Graphic Credit</h4>
+				<p>
+					Icons made by
+					<a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+					from
+					<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+				</p>
+			</div>
+			<div>
+				<h4>Privacy Policy</h4>
+				<p>You're not being tracked by me! How does it feel? Refreshing?
+					You may be tracked by others even across websites, though. That much is out of my hands. Consider using FireFox and DuckDuckGo.  </p>
+			</div>
+			<div class="social-container"></div>
+		</footer>
 	</body>
 </html>
