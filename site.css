@@ -3,12 +3,10 @@
   --darker-bg: #141414;
   --bg: #1c1d1f;
   --section-bg: #292d30;
-
   --light-font: #c8c6c7;
   --box-title: #ddd;
   --dark-font: #17181a;
   --normal-font: #757b86;
-
   --lightest-pink: #ffe8ef;
   --light-pink: #ffbdce;
   --pink: #ff4375;
@@ -22,9 +20,7 @@
   --blue: #43d7ff;
   --transparent-blue: #43d6ff4d;
   --darker-blue: #55b4cd;
-
   --font-size: 10px;
-
   --radius: 8vw;
   --box-padding: 6vw;
   --min-card-width: 600px;
@@ -37,16 +33,48 @@
   --footer-h4-size: 1em;
   --footer-p-size: 0.8em;
   --li-size: 1.5em;
-
-  /* Breakpoints */
-
-  --phone-end: 481px;
 }
 
 body {
+  z-index: -3;
   margin: 0;
   font-family: "Quicksand", sans-serif;
+  background-color: none;
+  background: none;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--bg);
   /* background-color: var(--bg); */
+  opacity: 50%;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--darker-blue);
+  border-radius: 10px;
+}
+
+/* body > * {
+  z-index: 3;
+} */
+
+.bg {
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  z-index: -2;
+}
+
+.dark-gradient {
+  /* background-color: red; */
   background: rgb(28, 29, 31);
   background: -moz-linear-gradient(
     183deg,
@@ -63,7 +91,6 @@ body {
     rgba(28, 29, 31, 1) 0%,
     rgba(23, 24, 25, 1) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1d1f", endColorstr="#171819", GradientType=1);
 }
 
 /* Breakpoints */
@@ -76,60 +103,56 @@ body {
   row-gap: 4vw;
 }
 
-@media only screen and (min-width: 481px) {
-  .box .date {
-    display: inline;
-    float: right;
-  }
+/* TODO: Move these */
+#index {
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "nav"
+    "header"
+    "profile"
+    "site-info"
+    "about-me"
+    "socials"
+    ".";
 }
 
-@media only screen and (max-width: 768px) {
-  #index {
-    grid-template-columns: 100%;
-    grid-template-areas:
-      "nav"
-      "header"
-      "profile"
-      "site-info"
-      "about-me"
-      "socials"
-      ".";
-  }
-
-  .social-container {
-    justify-content: space-evenly;
-  }
-
-  .social-container a img {
-    width: 20vw;
-    max-width: 80px;
-  }
-
-  .social-container a {
-    padding: 3vw;
-    margin: 2vw;
-  }
-
-  #t-1 {
-    width: 100vw;
-    height: 100vh;
-  }
-
-  #t-2 {
-    width: 80vw;
-    height: 80vh;
-  }
+.box .date {
+  display: inline;
+  float: right;
+}
+.social-container {
+  justify-content: space-evenly;
 }
 
-@media only screen and (min-width: 769px) {
+.social-container a img {
+  width: 20vw;
+  max-width: 80px;
+}
+
+.social-container a {
+  padding: 3vw;
+  margin: 2vw;
+}
+
+#t-1 {
+  width: 100vw;
+  height: 100vh;
+}
+
+#t-2 {
+  width: 80vw;
+  height: 80vh;
+}
+
+@media screen and (min-width: 769px) {
   #index {
-    grid-template-columns: 30%;
+    grid-template-columns: 20%;
     grid-template-areas:
-      "nav nav nav nav"
-      "header header header header"
-      "profile profile site-info site-info"
-      "about-me about-me about-me socials"
-      ". . . .";
+      "nav nav nav nav nav nav"
+      "header header header header header header"
+      "profile profile profile site-info site-info site-info"
+      "about-me about-me about-me about-me about-me socials"
+      ". . . . . .";
   }
 
   .box ul,
@@ -153,7 +176,7 @@ body {
 
   .social-container a img {
     width: 7vw;
-    height: 7vw;
+    height: auto;
     max-width: 60px;
   }
 
@@ -210,9 +233,6 @@ footer {
 }
 
 footer > div {
-  width: 1fr;
-  min-width: 1fr;
-  /* max-height: 50px; */
   margin: 1vw;
 }
 
@@ -250,11 +270,13 @@ nav {
   background-color: var(--blue);
   border-radius: 30px;
   display: flex;
+  justify-items: flex-start;
+  justify-content: flex-start;
 }
 
 nav a {
   text-decoration: none;
-  padding: 0.4em;
+  padding: 0.5em;
   color: var(--dark-font);
   font-family: "Lekton", serif;
   font-size: var(--p-size);
@@ -301,7 +323,6 @@ header h2 {
   margin-top: 0;
   padding-left: var(--box-padding);
   border-radius: var(--radius) var(--radius) 0 0;
-  /* background-color: var(--pink); */
   background: rgb(255, 67, 117);
   background: linear-gradient(
     77deg,
@@ -320,7 +341,6 @@ header h2 {
 
 .box .title-container h2 {
   color: var(--box-title);
-  /* color: var(--light-font); */
   display: inline;
   padding-right: 2vw;
 }
@@ -330,7 +350,6 @@ header h2 {
 .box h2 {
   display: inline-block;
   margin: 0;
-  /* padding-left: 5px; */
   color: var(--light-font);
   font-size: var(--h2-size);
 }
@@ -380,7 +399,6 @@ header h2 {
 
 .box p.position {
   font-style: italic;
-  /* font-size: var(--h5-size); */
   font-weight: 600;
   color: var(--dark-font);
   margin-top: 0;
@@ -419,15 +437,12 @@ header h2 {
 }
 
 .box li p {
-  /* margin: 1.5vw; */
-  /* padding: 5px; */
   margin: 5px;
 }
 
 .box li {
   color: var(--darker-blue);
   margin: 5px;
-  /* max-width: 50%; */
 }
 
 .box ul li {
@@ -514,7 +529,7 @@ caption {
   width: 100%;
   height: auto;
   max-width: 400px;
-  z-index: -4;
+  z-index: -1;
   clip-path: polygon(50% 90%, 5% 15%, 95% 15%);
   mask-size: cover;
 }
@@ -533,7 +548,6 @@ caption {
   display: flex;
   position: absolute;
   flex-shrink: 0;
-  z-index: -5;
   animation-name: rotate;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -541,21 +555,22 @@ caption {
 
 #t-1 {
   animation-duration: 20s;
+  z-index: -2;
 }
 
 #t-2 {
   animation-duration: 15s;
+  z-index: -2;
 }
 
 #dark-triangle {
   fill: var(--darker-bg);
-  /* fill: red; */
-  transform: scale(550%);
+  transform: scale(6);
 }
 
 #color-triangle {
   fill: rgb(255, 67, 117);
-  transform: scale(500%);
+  transform: scale(5);
 }
 
 /* Resume */
@@ -566,7 +581,7 @@ caption {
   position: fixed;
   top: 0vh;
   left: -10vw;
-  z-index: -1;
+  z-index: -3;
 }
 
 #resume-stripe-mask {
@@ -574,13 +589,7 @@ caption {
   /* This is expanding it */
   width: 400vw;
   height: 40vw;
-  rotate: 45deg;
-  /* animation-name: rotate;
-  animation-duration: 800s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transform-origin: 70vw 70vw; */
-  transform: translateY(10%);
+  transform: rotate(45deg) translateY(10%);
 }
 
 #zebra-gradient {
@@ -640,9 +649,9 @@ button img {
 .jiggle:hover {
   transform: rotate(6deg);
   opacity: 100%;
-  transition-property: transform opacity background-color;
+  transition-property: transform, opacity, background-color;
   transition-duration: 0.3s;
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
   animation-name: jiggle;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -652,19 +661,19 @@ button img {
 @keyframes jiggle {
   0%,
   5%,
-  50%,
+  38%,
   100% {
-    rotate: 0deg;
+    transform: rotate(6deg);
   }
   10%,
   20% {
-    rotate: 3deg;
+    transform: rotate(12deg);
   }
   15% {
-    rotate: -3deg;
+    transform: rotate(0deg);
   }
   30% {
-    rotate: -2deg;
+    transform: rotate(2deg);
   }
 }
 
