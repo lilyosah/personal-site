@@ -37,13 +37,13 @@
   --blue: #43d7ff;
   --transparent-blue: #43d6ff4d;
   --darker-blue: #55b4cd;
-  --rainbow-gradient: 
+  --rainbow-gradient:
     linear-gradient(
-    77deg,
-    rgba(255, 67, 117, 1) 0%,
-    rgba(188, 78, 255, 1) 50%,
-    rgba(67, 215, 255, 1) 100%
-  );
+      77deg,
+      rgba(255, 67, 117, 1) 0%,
+      rgba(188, 78, 255, 1) 50%,
+      rgba(67, 215, 255, 1) 100%
+    );
   --font-size: 10px;
   --radius: 8vw;
   --box-padding: 6vw;
@@ -61,7 +61,7 @@
 
 body {
   z-index: -3;
-  margin: 0px;
+  margin: 0;
   font-family:
     "Quicksand",
     sans-serif;
@@ -78,24 +78,24 @@ body {
 
 .dark-gradient {
   background: rgb(28, 29, 31);
-  background: 
+  background:
     -moz-linear-gradient(
-    183deg,
-    rgba(28, 29, 31, 1) 0%,
-    rgba(23, 24, 25, 1) 100%
-  );
-  background: 
+      183deg,
+      rgba(28, 29, 31, 1) 0%,
+      rgba(23, 24, 25, 1) 100%
+    );
+  background:
     -webkit-linear-gradient(
-    183deg,
-    rgba(28, 29, 31, 1) 0%,
-    rgba(23, 24, 25, 1) 100%
-  );
-  background: 
+      183deg,
+      rgba(28, 29, 31, 1) 0%,
+      rgba(23, 24, 25, 1) 100%
+    );
+  background:
     linear-gradient(
-    183deg,
-    rgba(28, 29, 31, 1) 0%,
-    rgba(23, 24, 25, 1) 100%
-  );
+      183deg,
+      rgba(28, 29, 31, 1) 0%,
+      rgba(23, 24, 25, 1) 100%
+    );
 }
 
 .grid {
@@ -127,7 +127,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-  
+
 #t-2 {
   animation-duration: 15s;
   z-index: -2;
@@ -167,6 +167,25 @@ and 1280px  */
 
 #contact {
   grid-area: contact;
+}
+
+/* Seems really dumb that the linter wants these here but whatever.... */
+
+nav a {
+  text-decoration: none;
+  padding: 0.5em;
+  color: var(--dark-font);
+  font-family: "Lekton", serif;
+  font-size: var(--p-size);
+  height: var(--p-size);
+  font-weight: 600;
+  transition-property: transform;
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+}
+
+nav img {
+  height: 100%;
 }
 
 /* Socials */
@@ -213,25 +232,8 @@ nav {
   justify-content: flex-start;
 }
 
-nav a {
-  text-decoration: none;
-  padding: 0.5em;
-  color: var(--dark-font);
-  font-family: "Lekton", serif;
-  font-size: var(--p-size);
-  height: var(--p-size);
-  font-weight: 600;
-  transition-property: transform;
-  transition-timing-function: linear;
-  transition-duration: 0.1s;
-}
-
 nav a:hover {
   transform: translateY(-4px);
-}
-
-nav img {
-  height: 100%;
 }
 
 footer {
@@ -298,10 +300,19 @@ header h2 {
   font-size: var(--h3-size);
 }
 
+button p {
+  padding: 3vw;
+}
+
+button img {
+  height: 3.5em;
+  margin: 0.5em;
+}
+
 .box .title-container {
   margin-top: 0px;
   padding-left: var(--box-padding);
-  border-radius: var(--radius) var(--radius) 0px0px;
+  border-radius: var(--radius) var(--radius) 0px 0px;
   background: rgb(255, 67, 117);
   background: var(--rainbow-gradient);
 }
@@ -315,6 +326,7 @@ header h2 {
 
 /* Headers 2 and 3 go on the top of the box, under that level they should
  go in the content of the box */
+
 .box h2 {
   display: inline-block;
   margin: 0px;
@@ -480,6 +492,35 @@ caption {
   font-weight: 700;
 }
 
+button {
+  background: rgb(137, 45, 194);
+  background:
+    -moz-linear-gradient(
+      144deg,
+      rgba(137, 45, 194, 1) 0%,
+      rgba(202, 116, 255, 1) 100%
+    );
+  background:
+    -webkit-linear-gradient(
+      144deg,
+      rgba(137, 45, 194, 1) 0%,
+      rgba(202, 116, 255, 1) 100%
+    );
+  background:
+    linear-gradient(
+      144deg,
+      rgba(137, 45, 194, 1) 0%,
+      rgba(202, 116, 255, 1) 100%
+    );
+  border: none;
+  border-radius: 3vw;
+  font-family: "Lekton", serif;
+  font-weight: 700;
+  color: var(--dark-font);
+  font-size: var(--p-size);
+  display: flex;
+}
+
 /* Form */
 
 form input,
@@ -600,49 +641,14 @@ form button {
   width: 200vw;
   height: 150vh;
   mask-image: url(#tr-bl-zebra-mask);
-  background: 
+  background:
     repeating-linear-gradient(
-    -45deg,
-    var(--darker-bg) 0px 4vw,
-    transparent 4vw 8vw
-  );
+      -45deg,
+      var(--darker-bg) 0px 4vw,
+      transparent 4vw 8vw
+    );
 }
 
-button {
-  background: rgb(137, 45, 194);
-  background: -moz-linear-gradient(
-    144deg,
-    rgba(137, 45, 194, 1) 0%,
-    rgba(202, 116, 255, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    144deg,
-    rgba(137, 45, 194, 1) 0%,
-    rgba(202, 116, 255, 1) 100%
-  );
-  background: linear-gradient(
-    144deg,
-    rgba(137, 45, 194, 1) 0%,
-    rgba(202, 116, 255, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#892dc2", endColorstr="#ca74ff", GradientType=1);
-  border: none;
-  border-radius: 3vw;
-  font-family: "Lekton", serif;
-  font-weight: 700;
-  color: var(--dark-font);
-  font-size: var(--p-size);
-  display: flex;
-}
-
-button p {
-  padding: 3vw;
-}
-
-button img {
-  height: 3.5em;
-  margin: 0.5em;
-}
 
 .jiggle {
   opacity: 80%;
@@ -667,13 +673,16 @@ button img {
   100% {
     transform: rotate(6deg);
   }
+
   10%,
   20% {
     transform: rotate(12deg);
   }
+
   15% {
     transform: rotate(0deg);
   }
+
   30% {
     transform: rotate(2deg);
   }
