@@ -20,6 +20,12 @@
   --blue: #43d7ff;
   --transparent-blue: #43d6ff4d;
   --darker-blue: #55b4cd;
+  --rainbow-gradient: linear-gradient(
+    77deg,
+    rgba(255, 67, 117, 1) 0%,
+    rgba(188, 78, 255, 1) 50%,
+    rgba(67, 215, 255, 1) 100%
+  );
   --font-size: 10px;
   --radius: 8vw;
   --box-padding: 6vw;
@@ -112,6 +118,7 @@ body {
     "profile"
     "site-info"
     "about-me"
+    "contact"
     "socials"
     ".";
 }
@@ -144,55 +151,6 @@ body {
   height: 80vh;
 }
 
-@media screen and (min-width: 769px) {
-  #index {
-    grid-template-columns: 20%;
-    grid-template-areas:
-      "nav nav nav nav nav nav"
-      "header header header header header header"
-      "profile profile profile site-info site-info site-info"
-      "about-me about-me about-me about-me about-me socials"
-      ". . . . . .";
-  }
-
-  .box ul,
-  .box ol {
-    display: flex;
-    justify-content: flex-start;
-    justify-items: flex-start;
-    flex-flow: wrap column;
-    max-height: calc(500px - 20vw);
-  }
-
-  .social-container {
-    justify-content: flex-start;
-    height: min-content;
-  }
-
-  .social-container a {
-    padding: 2vw;
-    margin: 0.9vw;
-  }
-
-  .social-container a img {
-    width: 7vw;
-    height: auto;
-    max-width: 60px;
-  }
-
-  #index #t-1 {
-    top: 20vw;
-    width: 60vw;
-    height: 60vw;
-  }
-
-  #t-2 {
-    /* top: 20vw; */
-    width: 60vw;
-    height: 60vh;
-  }
-}
-
 #resume {
   grid-template-columns: 100%;
   grid-template-areas:
@@ -221,6 +179,10 @@ and 1280px  */
 
 #about-me {
   grid-area: about-me;
+}
+
+#contact {
+  grid-area: contact;
 }
 
 footer {
@@ -324,12 +286,7 @@ header h2 {
   padding-left: var(--box-padding);
   border-radius: var(--radius) var(--radius) 0 0;
   background: rgb(255, 67, 117);
-  background: linear-gradient(
-    77deg,
-    rgba(255, 67, 117, 1) 0%,
-    rgba(188, 78, 255, 1) 50%,
-    rgba(67, 215, 255, 1) 100%
-  );
+  background: var(--rainbow-gradient);
 }
 
 .box .title-container img {
@@ -411,7 +368,7 @@ header h2 {
 }
 
 .box-content strong {
-  color: var(--purple);
+  color: var(--light-font);
 }
 
 .box p {
@@ -517,6 +474,54 @@ caption {
   height: min-content;
 }
 
+/* Form */
+
+form input,
+form textarea {
+  font-size: var(--p-size);
+  color: var(--light-font);
+  background-color: var(--bg);
+  border: none;
+  border-radius: 1vw;
+  padding: 0.7em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  width: calc(100% - var(--box-padding));
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+}
+
+#fcontent {
+  height: 10em;
+}
+
+form label {
+  display: none;
+}
+
+form > * {
+  margin-bottom: 1em;
+}
+
+form div {
+  display: flex;
+  justify-content: center;
+}
+
+form button {
+  font-family: "Quicksand", sans-serif;
+  padding: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  background: var(--rainbow-gradient);
+  color: var(--box-title);
+}
+
 /* Portrait */
 #portrait {
   grid-area: profile;
@@ -581,7 +586,7 @@ caption {
   position: fixed;
   top: 0vh;
   left: -10vw;
-  z-index: -3;
+  z-index: -2;
 }
 
 #resume-stripe-mask {
@@ -606,7 +611,6 @@ caption {
 }
 
 button {
-  /* background-color: var(--purple); */
   background: rgb(137, 45, 194);
   background: -moz-linear-gradient(
     144deg,
@@ -680,5 +684,69 @@ button img {
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #index {
+    grid-template-columns: 20%;
+    grid-template-areas:
+      "nav nav nav nav nav nav"
+      "header header header header header header"
+      "profile profile profile site-info site-info site-info"
+      "about-me about-me about-me about-me about-me socials"
+      "contact contact contact contact contact contact"
+      ". . . . . .";
+  }
+
+  .box ul,
+  .box ol {
+    display: flex;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    flex-flow: wrap column;
+    max-height: calc(500px - 20vw);
+  }
+
+  .social-container {
+    justify-content: flex-start;
+    height: min-content;
+  }
+
+  .social-container a {
+    padding: 2vw;
+    margin: 0.9vw;
+  }
+
+  .social-container a img {
+    width: 7vw;
+    height: auto;
+    max-width: 60px;
+  }
+
+  #index #t-1 {
+    top: 20vw;
+    width: 60vw;
+    height: 60vw;
+  }
+
+  #t-2 {
+    /* top: 20vw; */
+    width: 60vw;
+    height: 60vh;
+  }
+
+  form input,
+  form textarea {
+    width: 40%;
+  }
+
+  form textarea {
+    width: 100%;
+  }
+
+  form button {
+    padding: 1em;
+    width: 15%;
   }
 }

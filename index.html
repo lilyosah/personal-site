@@ -20,6 +20,7 @@
           <img src="src/graphics/icons/d_home.svg" alt="Home icon" />
         </a>
         <a href="pages/resume.html">résumé</a>
+        <a href="index.html#contact">contact</a>
       </nav>
       <header>
         <h1>Lily Davisson Site Home</h1>
@@ -58,9 +59,9 @@
               </strong>
             </em>
             <br /><br />
-            Please feel free to peruse my resume and reach out for a chat at
-            <a href="lilydavisson@gmail.com">lilydavisson@gmail.com</a> if you
-            think I may be a good fit for your team.
+            Please feel free to peruse my resume and
+            <a href="#contact">reach out for a chat</a>
+            if you think I may be a good fit for your team.
           </p>
         </div>
       </summary>
@@ -172,13 +173,51 @@
           <img src="src/graphics/icons/github.svg" alt="Github logo" />
         </a>
       </div>
+      <section id="contact" class="box">
+        <div class="title-container">
+          <h2>contact</h2>
+        </div>
+        <div class="box-content">
+          <h3>Please reach out, I'd love to hear from you!</h3>
+          <form
+            action="https://getform.io/f/18a62700-f59d-4e51-af8c-80ecc0f49764"
+            method="POST"
+          >
+            <label for="fname">Name</label>
+            <input
+              id="fname"
+              type="text"
+              placeholder="name"
+              name="name"
+              required
+            />
+            <br />
+            <label for="femail">Your email</label>
+            <input
+              id="femail"
+              type="email"
+              name="email"
+              placeholder="email"
+              required
+            />
+            <br />
+            <label for="fcontent">Message</label>
+            <textarea
+              required="true"
+              id="fcontent"
+              type="text"
+              name="message"
+              placeholder="Your message"
+              required
+            ></textarea>
+            <div>
+              <button class="jiggle" type="submit">send</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
     <footer>
-      <div id="contact">
-        <h4>Contact</h4>
-        <p>Lily Davisson</p>
-        <p>lilydavisson@gmail.com</p>
-      </div>
       <div>
         <h4>Graphic Credit</h4>
         <p>
