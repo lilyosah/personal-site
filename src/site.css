@@ -707,8 +707,8 @@ form button {
       ". . . . . .";
   }
 
-  .box ul,
-  .box ol {
+  .box ul.should-wrap,
+  .box ol.should-wrap {
     display: flex;
     justify-content: flex-start;
     justify-items: flex-start;
