@@ -2,7 +2,7 @@
 ::-webkit-scrollbar {
   width: 15px;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
   background-color: var(--bg);
@@ -37,13 +37,12 @@
   --blue: #43d7ff;
   --transparent-blue: #43d6ff4d;
   --darker-blue: #55b4cd;
-  --rainbow-gradient:
-    linear-gradient(
-      77deg,
-      rgba(255, 67, 117, 1) 0%,
-      rgba(188, 78, 255, 1) 50%,
-      rgba(67, 215, 255, 1) 100%
-    );
+  --rainbow-gradient: linear-gradient(
+    77deg,
+    rgba(255, 67, 117, 1) 0%,
+    rgba(188, 78, 255, 1) 50%,
+    rgba(67, 215, 255, 1) 100%
+  );
   --font-size: 10px;
   --radius: 8vw;
   --box-padding: 6vw;
@@ -62,9 +61,7 @@
 body {
   z-index: -3;
   margin: 0;
-  font-family:
-    "Quicksand",
-    sans-serif;
+  font-family: "Quicksand", sans-serif;
   background-color: none;
   background: none;
   overflow-x: hidden;
@@ -79,24 +76,21 @@ body {
 
 .dark-gradient {
   background: rgb(28, 29, 31);
-  background:
-    -moz-linear-gradient(
-      183deg,
-      rgba(28, 29, 31, 1) 0%,
-      rgba(23, 24, 25, 1) 100%
-    );
-  background:
-    -webkit-linear-gradient(
-      183deg,
-      rgba(28, 29, 31, 1) 0%,
-      rgba(23, 24, 25, 1) 100%
-    );
-  background:
-    linear-gradient(
-      183deg,
-      rgba(28, 29, 31, 1) 0%,
-      rgba(23, 24, 25, 1) 100%
-    );
+  background: -moz-linear-gradient(
+    183deg,
+    rgba(28, 29, 31, 1) 0%,
+    rgba(23, 24, 25, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    183deg,
+    rgba(28, 29, 31, 1) 0%,
+    rgba(23, 24, 25, 1) 100%
+  );
+  background: linear-gradient(
+    183deg,
+    rgba(28, 29, 31, 1) 0%,
+    rgba(23, 24, 25, 1) 100%
+  );
 }
 
 .grid {
@@ -252,9 +246,7 @@ footer > div {
 
 footer h4,
 footer p {
-  font-family:
-    "Lekton",
-    serif;
+  font-family: "Lekton", serif;
   color: var(--dark-font);
 }
 
@@ -288,16 +280,12 @@ h2 {
 header h1 {
   margin: 0px;
   padding: 0px;
-  font-family:
-    "Bree Serif",
-    serif;
+  font-family: "Bree Serif", serif;
   font-size: var(--h1-size);
 }
 
 header h2 {
-  font-family:
-    "Bree Serif",
-    serif;
+  font-family: "Bree Serif", serif;
   font-size: var(--h3-size);
 }
 
@@ -346,9 +334,7 @@ button img {
   float: right;
   margin: 0px;
   font-size: var(--h5-size);
-  font-family:
-    "Lekton",
-    serif;
+  font-family: "Lekton", serif;
   font-weight: 600;
   color: var(--darker-pink);
 }
@@ -382,9 +368,7 @@ button img {
 
 .box h4 {
   margin: 0px;
-  font-family:
-    "Lekton",
-    serif;
+  font-family: "Lekton", serif;
   font-style: italic;
   color: var(--normal-font);
   font-size: var(--h5-size);
@@ -415,9 +399,7 @@ button img {
 
 .box a:link {
   color: var(--pink);
-  font-family:
-    "Lekton",
-    serif;
+  font-family: "Lekton", serif;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.5s;
@@ -487,32 +469,27 @@ caption {
 }
 
 .box td {
-  font-family:
-    "Lekton",
-    serif;
+  font-family: "Lekton", serif;
   font-weight: 700;
 }
 
 button {
   background: rgb(137, 45, 194);
-  background:
-    -moz-linear-gradient(
-      144deg,
-      rgba(137, 45, 194, 1) 0%,
-      rgba(202, 116, 255, 1) 100%
-    );
-  background:
-    -webkit-linear-gradient(
-      144deg,
-      rgba(137, 45, 194, 1) 0%,
-      rgba(202, 116, 255, 1) 100%
-    );
-  background:
-    linear-gradient(
-      144deg,
-      rgba(137, 45, 194, 1) 0%,
-      rgba(202, 116, 255, 1) 100%
-    );
+  background: -moz-linear-gradient(
+    144deg,
+    rgba(137, 45, 194, 1) 0%,
+    rgba(202, 116, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    144deg,
+    rgba(137, 45, 194, 1) 0%,
+    rgba(202, 116, 255, 1) 100%
+  );
+  background: linear-gradient(
+    144deg,
+    rgba(137, 45, 194, 1) 0%,
+    rgba(202, 116, 255, 1) 100%
+  );
   border: none;
   border-radius: 3vw;
   font-family: "Lekton", serif;
@@ -532,9 +509,7 @@ form textarea {
   border: none;
   border-radius: 1vw;
   padding: 0.7em;
-  font-family:
-    "Quicksand",
-    sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 600;
   width: calc(100% - var(--box-padding));
 }
@@ -558,13 +533,11 @@ form > * {
 
 form div {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 form button {
-  font-family:
-    "Quicksand",
-    sans-serif;
+  font-family: "Quicksand", sans-serif;
   padding: 0.7em;
   display: flex;
   align-items: center;
@@ -642,14 +615,12 @@ form button {
   width: 200vw;
   height: 150vh;
   mask-image: url(#tr-bl-zebra-mask);
-  background:
-    repeating-linear-gradient(
-      -45deg,
-      var(--darker-bg) 0px 4vw,
-      transparent 4vw 8vw
-    );
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--darker-bg) 0px 4vw,
+    transparent 4vw 8vw
+  );
 }
-
 
 .jiggle {
   opacity: 80%;
