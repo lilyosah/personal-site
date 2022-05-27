@@ -31,71 +31,85 @@
       <header>
         <h1>Projects</h1>
       </header>
-
+      <section id="tagList">
+        <p>Filter projects by skill used. Click and unclick to apply filter.</p>
+        <div class="row">
+          <button class="jiggle">
+            <img
+              id="filter"
+              src="graphics/icons/filter.png"
+              alt="Clear filters"
+              title="Clear filters"
+            />
+          </button>
+          <ul class="tags">
+          </ul>
+        </div>
+      </section>
       <section class="box">
         <div class="title-container">
-          <h2>A Better (Unnamed) Todo App</h2>
+          <h2>Quill Todo</h2>
         </div>
-        <div class="box-content two-col-wrap">
-          <div>
-            <div class="subtitle static">
-              <div>
-                <h3>Description</h3>
+        <div class="box-content">
+          <div class="two-col-wrap"> 
+            <div>
+              <div class="subtitle static">
+                <p class="date">August 2021 - Present</p>
+                <ul class="tags"></ul>
               </div>
-              <p class="date">August 2021 - Present</p>
-            </div>
-            <p>
-              I love todo apps! Unfortunately, I have had trouble finding one
-              with all of the features that I want, so my friends and I are
-              creating our own in our software engineering class using Ruby on
-              Rails.
+              <p>
+                I love todo apps! Unfortunately, I have had trouble finding one
+                with all of the features that I want, so my friends and I are
+                creating our own in our software engineering class using Ruby on
+                Rails.
 
-              <br />
-              <br />
-              <strong>Core features:</strong>
-            </p>
-            <ul>
-              <li><p>a synchronized list and calendar view for tasks</p></li>
-              <li>
-                <p>
-                  the ability to add any number of different assigned “work”
-                  dates/subtasks for a task as well as a final due date
-                </p>
-              </li>
-              <li>
-                <p>
-                  very fast creation of tasks using natural language processing
-                </p>
-              </li>
-              <li><p>one-click addition of subtasks</p></li>
-              <li><p>drag to reschedule tasks</p></li>
-              <li>
-                <p>
-                  a system to encourage the user to redistribute work more
-                  evenly if they have too much work assigned for one or more
-                  dates
-                </p>
-              </li>
-              <li>
-                <p>fully open-source and made with love 💖</p>
-              </li>
-            </ul>
-          </div>
-          <div class="centered-wrapper">
-            <div class="relative expand-on-hover">
-              <div class="flex corner-float">
-                <a
-                  href="https://github.com/jamesdaus/COSC415-ToDo"
-                  target="_blank"
-                >
-                  <img
-                    class="jiggle"
-                    src="graphics/icons/github.svg"
-                    alt="link to github"
-                  />
-                </a>
+                <br />
+                <br />
+                <strong>Core features:</strong>
+              </p>
+              <ul>
+                <li><p>a synchronized list and calendar view for tasks</p></li>
+                <li>
+                  <p>
+                    the ability to add any number of different assigned “work”
+                    dates/subtasks for a task as well as a final due date
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    very fast creation of tasks using natural language processing
+                  </p>
+                </li>
+                <li><p>one-click addition of subtasks</p></li>
+                <li><p>drag to reschedule tasks</p></li>
+                <li>
+                  <p>
+                    a system to encourage the user to redistribute work more
+                    evenly if they have too much work assigned for one or more
+                    dates
+                  </p>
+                </li>
+                <li>
+                  <p>fully open-source and made with love 💖</p>
+                </li>
+              </ul>
+            </div>
+            <div class="centered-wrapper">
+              <div class="relative expand-on-hover">
+                <div class="flex corner-float">
+                  <a
+                    href="https://github.com/jamesdaus/COSC415-ToDo"
+                    target="_blank"
+                  >
+                    <img
+                      class="jiggle"
+                      src="graphics/icons/github.svg"
+                      alt="link to github"
+                    />
+                  </a>
+                </div>
+                <img src="projects/todo/todo.png" class="med" />
               </div>
-              <img src="projects/todo/todo.png" class="med" />
             </div>
           </div>
         </div>
@@ -137,10 +151,8 @@
           </div>
           <div>
             <div class="subtitle static">
-              <div>
-                <h3>Description</h3>
-              </div>
               <p class="date">July 2020</p>
+              <ul class="tags"></ul>
             </div>
             <p>
               <strong
@@ -170,10 +182,8 @@
         <div class="box-content two-col-wrap">
           <div>
             <div class="subtitle static">
-              <div>
-                <h3>Description</h3>
-              </div>
               <p class="date">August 2020</p>
+              <ul class="tags"></ul>
             </div>
             <p>
               This is a short art project I made around August 2020 to help me
@@ -235,9 +245,7 @@
           </div>
           <div>
             <div class="subtitle static">
-              <div>
-                <h3>Description</h3>
-              </div>
+              <ul class="tags"></ul>
               <p class="date">2020 - Present</p>
             </div>
             <p>
@@ -278,5 +286,6 @@
       </div>
       <div class="social-container"></div>
     </footer>
+    <script src="scripts/skillTagging.js"></script>
   </body>
 </html>

@@ -290,7 +290,7 @@ button img {
   display: inline;
   float: right;
   margin: 0px;
-  font-size: var(--h5-size);
+  font-size: var(--h3-size);
   font-family: "Lekton", serif;
   font-weight: 600;
   color: var(--darker-pink);
@@ -520,24 +520,9 @@ caption {
 }
 
 button {
-  background: rgb(137, 45, 194);
-  background: -moz-linear-gradient(
-    144deg,
-    rgba(137, 45, 194, 1) 0%,
-    rgba(202, 116, 255, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    144deg,
-    rgba(137, 45, 194, 1) 0%,
-    rgba(202, 116, 255, 1) 100%
-  );
-  background: linear-gradient(
-    144deg,
-    rgba(137, 45, 194, 1) 0%,
-    rgba(202, 116, 255, 1) 100%
-  );
+  background: var(--rainbow-gradient);
   border: none;
-  border-radius: 3vw;
+  border-radius: 20px;
   font-family: "Lekton", serif;
   font-weight: 700;
   color: var(--dark-font);
@@ -774,6 +759,7 @@ form button {
     "."
     "."
     "."
+    "."
     ".";
 }
 
@@ -843,6 +829,79 @@ form button {
   #projects .two-col-wrap > * {
     max-width: 48%;
   }
+}
+
+.row {
+  display: flex;
+  gap: 9px;
+  flex-direction: row;
+  align-items: center;
+  height: min-content;
+}
+
+.row .fit-row-space {
+  height: min-content;
+}
+
+#filter {
+  height: 50px;
+  aspect-ratio: 1/1;
+  margin-right: 9px;
+}
+
+.tag.row {
+  align-items: center;
+}
+
+.tag.row h3 {
+  margin: 0;
+}
+
+ul.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 0;
+}
+
+#tagList p {
+  color: var(--light-font);
+  font-size: var(--p-size);
+}
+
+ul.tags li {
+  /* background-color: red; */
+  border-radius: 10px;
+  font-size: var(--p-size);
+  color: white;
+  font-weight: 800;
+  list-style: none;
+  padding: 5px;
+  outline: none;
+  transition: border none;
+  height: min-content;
+}
+
+ul.tags li.selected {
+  outline: 3px solid white ;
+}
+
+.box ul.tags li,
+.box ul.tags {
+  margin: 0;
+} 
+
+.partial-fade-in-on-hover {
+  transition: opacity .2s;
+}
+
+.partial-fade-in-on-hover:not(.selected):not(:hover) {
+  opacity: 65%;
+}
+
+.partial-fade-in-on-hover:not(.selected):hover {
+  opacity: 90%;
 }
 
 img.green-link.corner-float {
