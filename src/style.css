@@ -591,7 +591,8 @@ form button {
   height: auto;
   max-width: 400px;
   z-index: 0;
-  clip-path: polygon(50% 90%, 5% 15%, 95% 15%);
+  /* clip-path: polygon(50% 90%, 5% 15%, 95% 15%); */
+  clip-path: polygon(60% 85%, 0% 30%, 95% 10%);
   mask-size: cover;
 }
 
