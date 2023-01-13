@@ -37,12 +37,10 @@
   --blue: #43d7ff;
   --transparent-blue: #43d6ff4d;
   --darker-blue: #55b4cd;
-  --rainbow-gradient: linear-gradient(
-    77deg,
-    rgba(255, 67, 117, 1) 0%,
-    rgba(188, 78, 255, 1) 50%,
-    rgba(67, 215, 255, 1) 100%
-  );
+  --rainbow-gradient: linear-gradient(77deg,
+      rgba(255, 67, 117, 1) 0%,
+      rgba(188, 78, 255, 1) 50%,
+      rgba(67, 215, 255, 1) 100%);
   --font-size: 10px;
   --radius: 8vw;
   --box-padding: 6vw;
@@ -76,21 +74,15 @@ body {
 
 .dark-gradient {
   background: rgb(28, 29, 31);
-  background: -moz-linear-gradient(
-    183deg,
-    rgba(28, 29, 31, 1) 0%,
-    rgba(23, 24, 25, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    183deg,
-    rgba(28, 29, 31, 1) 0%,
-    rgba(23, 24, 25, 1) 100%
-  );
-  background: linear-gradient(
-    183deg,
-    rgba(28, 29, 31, 1) 0%,
-    rgba(23, 24, 25, 1) 100%
-  );
+  background: -moz-linear-gradient(183deg,
+      rgba(28, 29, 31, 1) 0%,
+      rgba(23, 24, 25, 1) 100%);
+  background: -webkit-linear-gradient(183deg,
+      rgba(28, 29, 31, 1) 0%,
+      rgba(23, 24, 25, 1) 100%);
+  background: linear-gradient(183deg,
+      rgba(28, 29, 31, 1) 0%,
+      rgba(23, 24, 25, 1) 100%);
 }
 
 #t-1 {
@@ -188,7 +180,7 @@ footer {
   flex-wrap: wrap;
 }
 
-footer > div {
+footer>div {
   margin: 1vw;
 }
 
@@ -558,7 +550,7 @@ form label {
   display: none;
 }
 
-form > * {
+form>* {
   margin-bottom: 1em;
 }
 
@@ -647,11 +639,9 @@ form button {
   width: 200vw;
   height: 150vh;
   mask-image: url(#tr-bl-zebra-mask);
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--darker-bg) 0px 4vw,
-    transparent 4vw 8vw
-  );
+  background: repeating-linear-gradient(-45deg,
+      var(--darker-bg) 0px 4vw,
+      transparent 4vw 8vw);
 }
 
 .jiggle {
@@ -675,6 +665,7 @@ form button {
 
 /* Animations */
 @keyframes jiggle {
+
   0%,
   5%,
   38%,
@@ -761,6 +752,7 @@ form button {
     "."
     "."
     "."
+    "."
     ".";
 }
 
@@ -827,7 +819,7 @@ form button {
 
   /* Projects */
 
-  #projects .two-col-wrap > * {
+  #projects .two-col-wrap>* {
     max-width: 48%;
   }
 }
@@ -885,13 +877,13 @@ ul.tags li {
 }
 
 ul.tags li.selected {
-  outline: 3px solid white ;
+  outline: 3px solid white;
 }
 
 .box ul.tags li,
 .box ul.tags {
   margin: 0;
-} 
+}
 
 .partial-fade-in-on-hover {
   transition: opacity .2s;

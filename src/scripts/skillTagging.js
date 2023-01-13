@@ -23,6 +23,11 @@ const projects = {
         boxNode: null,
         tagListNode: null,
         tags: new Set(),
+    },
+    "Colgate Tech. Immersion Week": {
+        boxNode: null,
+        tagListNode: null,
+        tags: new Set(["HTML", "CSS", "JavaScript", "Django", "React"]),
     }
 }
 
